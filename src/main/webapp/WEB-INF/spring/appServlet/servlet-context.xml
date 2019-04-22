@@ -17,8 +17,7 @@
 		up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
 
-	<context:component-scan
-		base-package="kr.ac.hansung.controller" />
+	<context:component-scan base-package="kr.ac.hansung.controller" />
 
 
 	<beans:bean id="tilesViewResolver"
