@@ -36,7 +36,7 @@
 				<c:forEach var="student" items="${students}">
 					<tr>
 						<td>${student.name}</td>
-						<td>${student.studentId}</td>
+						<td>${student.id}</td>
 						<td>${student.password}</td>
 						<td>
 							<a  href="<c:url value="/admin/students/updateStudent/${student.num}" />"> 

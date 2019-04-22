@@ -34,9 +34,9 @@
               	action="${pageContext.request.contextPath}/admin/students/addStudent"
               	method="post" modelAttribute="student">
                   <div class="from-group">
-                    <label for="studentId">ID</label>
-                      <sf:input path="studentId" id="studentId" class="form-control" />
-                      <sf:errors path="studentId" cssStyle="color:#ff0000;" />
+                    <label for="id">ID</label>
+                      <sf:input path="id" id="id" class="form-control" />
+                      <sf:errors path="id" cssStyle="color:#ff0000;" />
                   </div>
                   <div class="from-group">
                     <label for="password">PassWord</label>
