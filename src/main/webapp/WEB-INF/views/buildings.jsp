@@ -40,7 +40,7 @@
 							<a  href="<c:url value="/admin/buildings/schedules/${building.number}" />"> 
 							<i class="fa fa-align-justify" style="color:#0000ff;"></i></a>
 							<a  href="<c:url value="/admin/buildings/updateBuilding/${building.num}" />"> 
-							<i class="fa fa-user-plus" style="color:#0000ff;"></i></a>
+							<i class="fa fa-edit" style="color:#0000ff;"></i></a>
 							<a  href="<c:url value="/admin/buildings/deleteBuilding/${building.num}" />"> 
 							<i class="fa fa-user-times" style="color:#0000ff;"></i></a>
 						</td>

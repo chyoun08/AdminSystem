@@ -16,10 +16,10 @@
 		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
 	</definition>
 	
-	<!-- 	<definition name="admin" extends="base">
+	<definition name="admin" extends="base">
 		<put-attribute name="title" value="Administrator_Page" />
 		<put-attribute name="body" value="/WEB-INF/views/admin.jsp" />
-	</definition> -->
+	</definition>
 	
 	<definition name="buildings" extends="base">
 		<put-attribute name="title" value="Administ buildings" />
@@ -40,9 +40,19 @@
 		<put-attribute name="title" value="Schedule_Page" />
 		<put-attribute name="body" value="/WEB-INF/views/schedules.jsp" />
 	</definition>
+
+	<definition name="addSchedule" extends="base">
+		<put-attribute name="title" value="AddSchedule_Page" />
+		<put-attribute name="body" value="/WEB-INF/views/addSchedule.jsp" />
+	</definition>
+		
+	<definition name="updateSchedule" extends="base">
+		<put-attribute name="title" value="UpdateSchedule_Page" />
+		<put-attribute name="body" value="/WEB-INF/views/updateSchedule.jsp" />
+	</definition>
 	
 	<definition name="students" extends="base">
-		<put-attribute name="title" value="ViewProduct_Page" />
+		<put-attribute name="title" value="Students_Page" />
 		<put-attribute name="body" value="/WEB-INF/views/students.jsp" />
 	</definition>
 	

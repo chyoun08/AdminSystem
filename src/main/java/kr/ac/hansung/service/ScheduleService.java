@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import kr.ac.hansung.dao.ScheduleDao;
 import kr.ac.hansung.model.Schedule;
+import kr.ac.hansung.model.Student;
 
 @Service
 public class ScheduleService {
@@ -32,4 +33,8 @@ public class ScheduleService {
 		return scheduleDao.updateSchedule(schedule);
 	}
 
+	public Schedule getScheduleById(int num) {
+		
+		return scheduleDao.getScheduleById(num);
+	}
 }

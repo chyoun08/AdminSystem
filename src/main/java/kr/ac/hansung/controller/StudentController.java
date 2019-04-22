@@ -97,7 +97,6 @@ public class StudentController {
 			return "updateStudent";
 		}
 		
-		//System.out.println(product);
 		if( !studentService.updateStudent(student))
 			System.out.println("Adding student Can't be done!!");
 		

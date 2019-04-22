@@ -12,6 +12,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import kr.ac.hansung.model.Schedule;
+import kr.ac.hansung.model.Student;
 
 @Repository
 public class ScheduleDao {
@@ -43,26 +44,10 @@ public class ScheduleDao {
 			}
 			
 		});
-		/*
-		 * return jdbcTemplate.query(sqlStatement, new RowMapper<Schedule>() {
-		 * 
-		 * @Override public Schedule mapRow(ResultSet rs, int rowNum) throws
-		 * SQLException {
-		 * 
-		 * Schedule schedule = new Schedule();
-		 * 
-		 * schedule.setNum(rs.getInt("num")); schedule.setName(rs.getInt("name"));
-		 * schedule.setDay(rs.getInt("day")); schedule.setTime(rs.getInt("time"));
-		 * 
-		 * return schedule; }
-		 * 
-		 * });
-		 */
 	}
 	
 	public boolean addSchedule(Schedule schedule) {
 		
-//		int num = schedule.getNum();
 		String name = schedule.getName();
 		int number = schedule.getNumber();
 		int day = schedule.getDay();
@@ -93,6 +78,50 @@ public class ScheduleDao {
 		String sqlStatement = "update schedule set name = ?, number = ?, day = ?, time = ? where num = ?";
 		
 		return (jdbcTemplate.update(sqlStatement,new Object[] { name, number, day, time, num }) == 1);
+	}
+	
+//	public Schedule getScheduleByNumber(int number) {
+//		
+//		String sqlStatement = "select * from schedule where number = ?"; // id value search
+//
+//		return jdbcTemplate.queryForObject(sqlStatement, new Object[] { number }, new RowMapper<Schedule>() {
+//
+//			@Override
+//			public Schedule mapRow(ResultSet rs, int rowNum) throws SQLException {
+//
+//				Schedule schedule = new Schedule();
+//				
+//				schedule.setNum(rs.getInt("num"));
+//				schedule.setName(rs.getString("name"));
+//				schedule.setNumber(rs.getInt("number"));
+//				schedule.setDay(rs.getInt("day"));
+//				schedule.setTime(rs.getInt("time"));
+//
+//				return schedule;
+//			}
+//		});
+//	}
+	
+	public Schedule getScheduleById(int num) {
+
+		String sqlStatement = "select * from schedule where num = ?"; // id value search
+
+		return jdbcTemplate.queryForObject(sqlStatement, new Object[] { num }, new RowMapper<Schedule>() {
+
+			@Override
+			public Schedule mapRow(ResultSet rs, int rowNum) throws SQLException {
+
+				Schedule schedule = new Schedule();
+				
+				schedule.setNum(rs.getInt("num"));
+				schedule.setName(rs.getString("name"));
+				schedule.setNumber(rs.getInt("number"));
+				schedule.setDay(rs.getInt("day"));
+				schedule.setTime(rs.getInt("time"));
+
+				return schedule;
+			}
+		});
 	}
 	
 }
