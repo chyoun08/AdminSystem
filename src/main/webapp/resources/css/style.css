@@ -566,6 +566,10 @@ header nav .ownmenu .indicator {
 	background-size: cover;
 	
 }
+.sub-schedule{
+	background: url(../images/bg/sub-schedule.png) center center no-repeat;
+	background-size: cover;
+}
 .sub-bnr .overlay-gr {
 	padding: 100px 0;
 	background: rgb(241,145,0); /* Old browsers */

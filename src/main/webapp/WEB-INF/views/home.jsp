@@ -11,7 +11,7 @@
            <c:if test="${pageContext.request.userPrincipal.name != null}">
 				<c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
           <!-- Slider 1 -->
-          <li data-transition="fade" data-slotamount="7"> <img src="<c:url value="/resources/images/slides/slide-1.jpg"/>" data-bgposition="center center" alt="" />
+          <li data-transition="fade" data-slotamount="7"> <img src="<c:url value="/resources/images/slides/slide-1.png"/>" data-bgposition="center center" alt="" />
 					<!-- Layer -->
             <div class="tp-caption sft font-montserrat tp-resizeme" 
                   data-x="center" data-hoffset="0"
@@ -67,7 +67,7 @@
 			</li>
 				
 				<!-- Slider 2 -->
-	          <li data-transition="fade" data-slotamount="7"> <img src="<c:url value="/resources/images/slides/slide-2.jpg"/>" data-bgposition="center center" alt="" /> 
+	          <li data-transition="fade" data-slotamount="7"> <img src="<c:url value="/resources/images/slides/slide-2.png"/>" data-bgposition="center center" alt="" /> 
 	            
 	            <!-- Layer -->
 	            <div class="tp-caption sft font-montserrat tp-resizeme" 
@@ -119,7 +119,7 @@
 	          </li>
 	          
 	          <!-- Slider 3 -->
-	          <li data-transition="fade" data-slotamount="7"> <img src="<c:url value="/resources/images/slides/slide-3.jpg"/>" data-bgposition="center center" alt="" /> 
+	          <li data-transition="fade" data-slotamount="7"> <img src="<c:url value="/resources/images/slides/slide-3.png"/>" data-bgposition="center center" alt="" /> 
 	            
 	            <!-- Layer -->
 	            <div class="tp-caption sft font-montserrat tp-resizeme" 
@@ -174,7 +174,7 @@
 			</c:if>
             <c:if test="${pageContext.request.userPrincipal.name == null}">
             
-            <li data-transition="fade" data-slotamount="7"> <img src="<c:url value="/resources/images/slides/slide-1.jpg"/>" data-bgposition="center center" alt="" />
+            <li data-transition="fade" data-slotamount="7"> <img src="<c:url value="/resources/images/slides/slide-1.png"/>" data-bgposition="center center" alt="" />
             
             <form action="<c:url value="/login"/>" method="post">
             <!-- Layer -->
