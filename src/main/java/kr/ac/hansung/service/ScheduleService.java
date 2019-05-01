@@ -23,9 +23,9 @@ public class ScheduleService {
 		return scheduleDao.addSchedule(schedule);
 	}
 
-	public boolean deleteSchedule(int id) {
+	public boolean deleteSchedule(int num) {
 		
-		return scheduleDao.deleteSchedule(id);
+		return scheduleDao.deleteSchedule(num);
 	}
 	
 	public boolean updateSchedule(Schedule schedule) {

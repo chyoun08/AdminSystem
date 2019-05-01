@@ -40,9 +40,11 @@
 						<td>${student.password}</td>
 						<td>
 							<a  href="<c:url value="/admin/students/updateStudent/${student.num}" />"> 
-							<i class="fa fa-edit" style="color:#0000ff;"></i></a>
+								<i class="fa fa-edit" style="color:#0000ff;"></i>
+							</a>
 							<a  href="<c:url value="/admin/students/deleteStudent/${student.num}" />"> 
-							<i class="fa fa-user-times" style="color:#0000ff;"></i></a>
+								<i class="fa fa-user-times" style="color:#0000ff;"></i>
+							</a>
 						</td>
 				</c:forEach>
 			</tbody>

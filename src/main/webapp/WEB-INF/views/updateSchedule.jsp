@@ -30,7 +30,7 @@
               <!--======= Success Msg =========-->
               <div id="contact_message" class="success-msg"> <i class="fa fa-paper-plane-o"></i>Thank You. Your Message has been Submitted</div>
               <!--======= FORM  =========-->
-	              <sf:form action="${pageContext.request.contextPath}/admin/buildings/schedules/updateSchedule/${schedule.number}"
+	              <sf:form action="${pageContext.request.contextPath}/admin/buildings/schedules/updateSchedule/${schedule.num}"
 						method="post" modelAttribute="schedule">
 						
 						<sf:hidden path="num" id="num" />
@@ -57,7 +57,7 @@
 						</div>
 						<br />
 						<input type="submit" value="submit" class="btn btn-primary">
-						<a href="<c:url value="/admin/buildings/schedules/${schedule.number}" />"
+						<a href="<c:url value="/admin/buildings/schedules/${schedule.num}" />"
 							class="btn btn-primary">Cancel</a>
 					</sf:form>
             </div>

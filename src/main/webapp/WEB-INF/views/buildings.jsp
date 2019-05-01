@@ -37,12 +37,12 @@
 						<td>${building.name}</td>
 						<td>${building.number}</td>
 						<td>
-							<a  href="<c:url value="/admin/buildings/schedules/${building.number}" />"> 
-							<i class="fa fa-align-justify" style="color:#0000ff;"></i></a>
+							<a  href="<c:url value="/admin/buildings/schedules/${building.num}" />"> 
+							<i class="fa fa-align-justify" style="color:#00FF00;"></i></a>
 							<a  href="<c:url value="/admin/buildings/updateBuilding/${building.num}" />"> 
-							<i class="fa fa-edit" style="color:#0000ff;"></i></a>
+							<i class="fa fa-edit" style="color:#00FF00;"></i></a>
 							<a  href="<c:url value="/admin/buildings/deleteBuilding/${building.num}" />"> 
-							<i class="fa fa-user-times" style="color:#0000ff;"></i></a>
+							<i class="glyphicon glyphicon-remove" style="color:#00FF00;"></i></a>
 						</td>
 				</c:forEach>
 			</tbody>
