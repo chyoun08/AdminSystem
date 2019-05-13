@@ -19,6 +19,7 @@ import kr.ac.hansung.service.BuildingService;
 import kr.ac.hansung.service.ScheduleService;
 
 @Controller
+@RequestMapping(value="/admin/buildings/schedules")
 public class ScheduleController {
 
 	@Autowired
@@ -27,7 +28,7 @@ public class ScheduleController {
 	@Autowired
 	private BuildingService buildingService;
 	
-	@RequestMapping(value="/admin/buildings/schedules/{num}",method=RequestMethod.GET)
+	@RequestMapping(value="/{num}",method=RequestMethod.GET)
 	public String getSchedules(@PathVariable int num, Model model) {
 		
 		Building building = buildingService.getBuildingById(num);
@@ -38,7 +39,7 @@ public class ScheduleController {
 		
 	}
 	
-	@RequestMapping(value="/admin/buildings/schedules/addSchedule/{num}",method=RequestMethod.GET)
+	@RequestMapping(value="/addSchedule/{num}",method=RequestMethod.GET)
 	public String addSchedule(Model model,@PathVariable int num) {
 		
 		Schedule schedule = new Schedule();	
@@ -55,7 +56,7 @@ public class ScheduleController {
 		return "addSchedule";
 	}
 	
-	@RequestMapping(value="/admin/buildings/schedules/addSchedule/{number}",method=RequestMethod.POST)
+	@RequestMapping(value="/addSchedule/{number}",method=RequestMethod.POST)
 	public String addSchedulePost(@Valid Schedule schedule,@PathVariable int number, BindingResult result) {
 		
 		if(result.hasErrors()) {
@@ -74,7 +75,7 @@ public class ScheduleController {
 		return "redirect:/admin/buildings/schedules/{number}";
 	}
 	
-	@RequestMapping(value="/admin/buildings/schedules/deleteSchedule/{num}",method=RequestMethod.GET)
+	@RequestMapping(value="/deleteSchedule/{num}",method=RequestMethod.GET)
 	public String deleteSschedule(@PathVariable int num) {
 		
 		Schedule schedule = scheduleService.getScheduleById(num);
@@ -90,7 +91,7 @@ public class ScheduleController {
 		return "redirect:/admin/buildings/schedules/"+building_num;
 	}
 	
-	@RequestMapping(value="/admin/buildings/schedules/updateSchedule/{num}",method=RequestMethod.GET)
+	@RequestMapping(value="/updateSchedule/{num}",method=RequestMethod.GET)
 	public String updateSchedule(@PathVariable int num, Model model) {
 		
 		Schedule schedule = scheduleService.getScheduleById(num);
@@ -99,7 +100,7 @@ public class ScheduleController {
 		return "updateSchedule";
 	}
 	
-	@RequestMapping(value="/admin/buildings/schedules/updateSchedule/{num}",method=RequestMethod.POST)
+	@RequestMapping(value="/updateSchedule/{num}",method=RequestMethod.POST)
 	public String updateSchedulePost(@Valid Schedule schedule,@PathVariable int num, BindingResult result) {
 		
 		if(result.hasErrors()) {
